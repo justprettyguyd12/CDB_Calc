@@ -16,6 +16,7 @@ window.onload = () => {
     document.getElementById("weight").onkeydown = inputOnlyDigits;
     document.getElementById("weight").oninput = validateWeight;
     document.getElementById("issue-input").onmousedown = stopEvent;
+    document.getElementById("issue-input").ontouchstart = stopEvent;
 }
 
 function stopEvent(event) {
