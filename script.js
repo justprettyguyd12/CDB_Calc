@@ -15,8 +15,8 @@ window.onload = () => {
     document.getElementById("age").oninput = validateAge;
     document.getElementById("weight").onkeydown = inputOnlyDigits;
     document.getElementById("weight").oninput = validateWeight;
-    document.getElementById("issue-input").onclick = stopEvent;
-};
+    document.getElementById("issue-input").onmousedown = stopEvent;
+}
 
 function stopEvent(event) {
     event.preventDefault();
