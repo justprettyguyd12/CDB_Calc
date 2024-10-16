@@ -7,17 +7,21 @@ form.addEventListener('submit', function (event) {
     else {
         form.classList.add('was-validated');
     }
-    event.preventDefault();
-    event.stopPropagation();
-  }, true)
-
+    stopEvent(event);
+  }, true);
 
 window.onload = () => {
     document.getElementById("age").onkeydown = inputOnlyDigits;
     document.getElementById("age").oninput = validateAge;
     document.getElementById("weight").onkeydown = inputOnlyDigits;
     document.getElementById("weight").oninput = validateWeight;
+    document.getElementById("issue-input").onclick = stopEvent;
 };
+
+function stopEvent(event) {
+    event.preventDefault();
+    event.stopPropagation();
+}
 
 function inputOnlyDigits(event){
     if(isNaN(event.key) && event.key !== 'Backspace') {
