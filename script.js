@@ -9,9 +9,6 @@ form.addEventListener('submit', function (event) {
         }
         stopEvent(event);
     } catch (error) {
-        alert(document.querySelectorAll('input[id^=issue-]:checked').length);
-        alert(typeof(document.querySelectorAll('input[id^=issue-]:checked').values()));
-        alert(document.querySelectorAll('input[id^=issue-]:checked').values().next());
         alert(error);
         stopEvent(event);
     }
@@ -110,6 +107,8 @@ function calculate() {
 function getMaxIssue() {
     let maxValue = 0;
     // debug
+    let debug1 = document.querySelectorAll('input[id^=issue-]:checked');
+    let debug2 = document.querySelectorAll('input[id^=issue-]:checked').values();
     let all_issues_elements = document.querySelectorAll('input[id^=issue-]:checked').values().toArray();
     all_issues_elements.forEach((element) => {
         if (element.value > maxValue) maxValue = element.value
