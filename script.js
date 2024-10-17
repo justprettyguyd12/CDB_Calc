@@ -10,6 +10,8 @@ form.addEventListener('submit', function (event) {
         stopEvent(event);
     } catch (error) {
         alert(document.querySelectorAll('input[id^=issue-]:checked').length);
+        alert(typeof(document.querySelectorAll('input[id^=issue-]:checked').values()));
+        alert(document.querySelectorAll('input[id^=issue-]:checked').values().length);
         alert(error);
         stopEvent(event);
     }
