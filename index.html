@@ -84,7 +84,7 @@
                 <div>
                   <label for="dose-input">Выберите дозировку КБД масла:</label>
                   <select required id="dose-input" class="form-select form-select-sm">
-                      <option selected hidden disabled>Выберите дозировку</option>
+                      <option value="" selected hidden disabled>Выберите дозировку</option>
                       <option value="1">5%</option>
                       <option value="2">10%</option>
                       <option value="3">20%</option>
@@ -96,7 +96,7 @@
                 <div>
                   <label for="exp">Какой опыт употребления?</label>
                   <select required id="expirience" class="form-select form-select-sm">
-                    <option selected hidden disabled>Выберите опыт</option>
+                    <option value="" selected hidden disabled>Выберите опыт</option>
                     <option value="1">Хочу попробовать впервые</option>
                     <option value="2">Принимаю менее 3-х месяцев</option>
                     <option value="3">Принимаю более 3-х месяцев</option>
@@ -285,6 +285,7 @@
       </div>
     </div>
 
+    <script src="jquery-3.7.1.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

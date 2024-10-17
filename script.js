@@ -16,8 +16,13 @@ window.onload = () => {
     document.getElementById("weight").onkeydown = inputOnlyDigits;
     document.getElementById("weight").oninput = validateWeight;
     document.getElementById("issue-input").onmousedown = stopEvent;
-    document.getElementById("issue-input").ontouchend = stopEvent;
+    document.getElementById("issue-input").ontouchend = showModal;
 }
+
+function showModal(event) {
+    document.getElementById("issues-modal").modal();
+    stopEvent(event);
+} 
 
 function stopEvent(event) {
     event.preventDefault();
