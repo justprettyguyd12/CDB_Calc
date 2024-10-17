@@ -106,6 +106,9 @@ function calculate() {
 
 function getMaxIssue() {
     let maxValue = 0;
+    // debug
+    alert(document.querySelectorAll('input[id^=issue-]:checked'));
+    alert(document.querySelectorAll('input[id^=issue-]:checked').values());
     let all_issues_elements = document.querySelectorAll('input[id^=issue-]:checked').values().toArray();
     all_issues_elements.forEach((element) => {
         if (element.value > maxValue) maxValue = element.value
