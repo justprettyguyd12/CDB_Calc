@@ -11,7 +11,7 @@ form.addEventListener('submit', function (event) {
     } catch (error) {
         alert(document.querySelectorAll('input[id^=issue-]:checked').length);
         alert(typeof(document.querySelectorAll('input[id^=issue-]:checked').values()));
-        alert(document.querySelectorAll('input[id^=issue-]:checked').values().length);
+        alert(document.querySelectorAll('input[id^=issue-]:checked').values().next());
         alert(error);
         stopEvent(event);
     }
