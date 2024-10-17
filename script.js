@@ -1,6 +1,5 @@
 let form = document.getElementById('form');
 form.addEventListener('submit', function (event) {
-    console.log('валидация')
     if (form.checkValidity()) {
         calculate();
     }
