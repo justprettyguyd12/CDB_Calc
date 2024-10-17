@@ -20,7 +20,7 @@ window.onload = () => {
 }
 
 function showModal(event) {
-    $("issues-modal").modal();
+    $("#issues-modal").modal('toggle');
     stopEvent(event);
 } 
 
