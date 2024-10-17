@@ -20,7 +20,7 @@ window.onload = () => {
 }
 
 function showModal(event) {
-    document.getElementById("issues-modal").modal();
+    $("issues-modal").modal();
     stopEvent(event);
 } 
 
