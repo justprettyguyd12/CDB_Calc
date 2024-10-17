@@ -1,12 +1,18 @@
 let form = document.getElementById('form');
 form.addEventListener('submit', function (event) {
-    if (form.checkValidity()) {
-        calculate();
+    try {
+        if (form.checkValidity()) {
+            calculate();
+        }
+        else {
+            form.classList.add('was-validated');
+        }
+        stopEvent(event);
+    } catch (error) {
+        alert(error);
+        stopEvent(event);
     }
-    else {
-        form.classList.add('was-validated');
-    }
-    stopEvent(event);
+
   }, true);
 
 window.onload = () => {
